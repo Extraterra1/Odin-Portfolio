@@ -49,19 +49,24 @@ body {
   height: 100%;
   background-color: var(--bs-info);
   z-index: -1;
-  clip-path: polygon(0 0, 100% 0, 100% 61%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 42%, 0% 100%);
 }
 
 .about-container {
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas:
+    'portrait .'
+    'portrait content'
+    'portrait .';
   margin: 0 auto;
   max-width: 70vw;
 }
 
 .portrait-container {
   position: relative;
+  grid-area: portrait;
 }
 
 .portrait-container::before {
@@ -90,10 +95,10 @@ body {
   grid-template-rows: auto 1fr auto;
   padding: 4rem;
   color: var(--bs-gray-dark);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  grid-area: content;
 
-  /* max-height: 70%; */
   background-color: var(--bs-light);
-  align-self: center;
 }
 
 .content h2 {
