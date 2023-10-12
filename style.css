@@ -1,0 +1,124 @@
+:root {
+  --bs-blue: #0d6efd;
+  --bs-indigo: #6610f2;
+  --bs-purple: #6f42c1;
+  --bs-pink: #d63384;
+  --bs-red: #dc3545;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffc107;
+  --bs-green: #198754;
+  --bs-teal: #20c997;
+  --bs-cyan: #0dcaf0;
+  --bs-white: #fff;
+  --bs-gray: #6c757d;
+  --bs-gray-dark: #343a40;
+  --bs-primary: #0d6efd;
+  --bs-secondary: #6c757d;
+  --bs-success: #198754;
+  --bs-info: #0dcaf0;
+  --bs-warning: #ffc107;
+  --bs-danger: #dc3545;
+  --bs-light: #f8f9fa;
+  --bs-dark: #212529;
+  font-size: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--bs-light);
+  font-family: 'Basico', sans-serif;
+}
+
+.about {
+  position: relative;
+  filter: drop-shadow(0px 2px 8px rgba(99, 99, 99, 0.2));
+  padding: 10rem;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bs-info);
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 61%, 0% 100%);
+}
+
+.about-container {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin: 0 auto;
+  max-width: 70vw;
+}
+
+.portrait-container {
+  position: relative;
+}
+
+.portrait-container::before {
+  position: absolute;
+  z-index: 10;
+  content: 'Ashley Williams';
+  color: var(--bs-light);
+  font-size: 3.5vw;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  text-shadow: -1px 1px 0 #000;
+  font-family: 'Violety Dreams', 'Basico', sans-serif;
+}
+
+.portrait-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.content {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 4rem;
+  color: var(--bs-gray-dark);
+
+  /* max-height: 70%; */
+  background-color: var(--bs-light);
+  align-self: center;
+}
+
+.content h2 {
+  font-size: 5rem;
+}
+
+.content p {
+  padding: 1rem 0;
+  font-size: 1.7rem;
+  line-height: 3rem;
+  max-width: 70ch;
+}
+
+.socials {
+  display: flex;
+  justify-self: end;
+  gap: 1.5rem;
+  font-size: 3rem;
+}
+
+.socials svg {
+  transition: all 0.3s;
+}
+
+.socials svg:hover {
+  cursor: pointer;
+  transform: scale(1.1) !important;
+}
