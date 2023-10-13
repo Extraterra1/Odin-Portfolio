@@ -342,7 +342,7 @@ ul {
     top: 0;
     right: 0;
     width: 100%;
-    font-size: 7rem;
+    font-size: 6rem;
     transform: translateX(90%);
     text-align: left;
     white-space: nowrap;
@@ -364,5 +364,76 @@ ul {
 
   .socials {
     display: none;
+  }
+
+  .projects-item {
+    grid-template-rows: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    filter: none;
+    padding: 3rem;
+  }
+  .about::before {
+    clip-path: polygon(0 0, 100% 0, 100% 22%, 0% 50%);
+  }
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+  }
+
+  .portrait-container {
+    max-width: 80%;
+    transform: none;
+    float: none;
+
+    margin: 0 auto;
+  }
+  .portrait-container::before {
+    display: block;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    margin-left: 0.5rem;
+    white-space: wrap;
+    font-size: 9rem;
+    transform: none;
+  }
+
+  .content {
+    padding: 2rem 0;
+  }
+
+  .socials {
+    display: flex;
+    justify-content: center;
+  }
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-socials {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  :root {
+    font-size: 8px;
   }
 }
