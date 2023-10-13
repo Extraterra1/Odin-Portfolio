@@ -32,8 +32,16 @@ body {
   min-height: 100vh;
   background-color: var(--bs-light);
   font-family: 'Basico', sans-serif;
+  color: var(--bs-dark);
 }
 
+ul {
+  list-style: none;
+}
+
+/* ============================================ */
+/*                ABOUT                         */
+/* ============================================ */
 .about {
   position: relative;
   filter: drop-shadow(0px 2px 8px rgba(99, 99, 99, 0.2));
@@ -54,7 +62,7 @@ body {
 
 .about-container {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 3fr;
   grid-template-rows: 1fr 6fr 1fr;
   grid-template-areas:
     'portrait .'
@@ -67,6 +75,7 @@ body {
 .portrait-container {
   position: relative;
   grid-area: portrait;
+  /* aspect-ratio: 1/1; */
 }
 
 .portrait-container::before {
@@ -110,6 +119,9 @@ body {
   font-size: 1.7rem;
   line-height: 3rem;
   max-width: 70ch;
+
+  display: grid;
+  align-items: center;
 }
 
 .socials {
@@ -126,4 +138,76 @@ body {
 .socials svg:hover {
   cursor: pointer;
   transform: scale(1.1) !important;
+}
+
+/* ============================================ */
+/*                PROJECTS                      */
+/* ============================================ */
+
+.projects {
+  padding: 10rem;
+}
+
+.title h2 {
+  font-family: 'Violety Dreams', 'Basico', sans-serif;
+  font-size: 4rem;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  gap: 5rem;
+}
+
+.projects-item {
+  display: grid;
+  grid-template-rows: 3fr 2fr;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding-bottom: 5rem;
+}
+
+.project-content {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-header ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.project-header li:first-child {
+  flex-grow: 1;
+  font-size: 2rem;
+  align-self: center;
+}
+
+.project-header li:not(:first-child) {
+  font-size: 3rem;
+}
+
+.project-header svg {
+  transition: all 0.3s;
+}
+
+.project-header svg:hover {
+  cursor: pointer;
+  transform: scale(1.1) !important;
+}
+
+.project-desc {
+  font-size: 1.3rem;
+  color: var(--bs-gray-dark);
+  line-height: 2.8rem;
+}
+
+.screenshot {
+  max-height: 30rem;
+  overflow: hidden;
+}
+
+.screenshot img {
+  width: 100%;
 }
