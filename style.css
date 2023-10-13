@@ -211,3 +211,66 @@ ul {
 .screenshot img {
   width: 100%;
 }
+
+/* ============================================ */
+/*                FOOTER                      */
+/* ============================================ */
+
+.footer {
+  background-color: var(--bs-info);
+  padding: 10rem;
+  color: var(--bs-light);
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.footer-img-container {
+  display: grid;
+  place-items: center;
+}
+
+.footer-img-container img {
+  max-width: 100%;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.footer-title {
+  font-size: 3rem;
+}
+
+.footer-content p {
+  font-size: 1.5rem;
+  max-width: 30ch;
+}
+
+.footer-contact p {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.footer-contact p svg {
+  font-size: 2.3rem;
+}
+
+.footer-socials {
+  color: var(--bs-dark);
+  font-size: 3rem;
+}
+
+.footer-socials svg {
+  transition: all 0.3s;
+}
+
+.footer-socials svg:hover {
+  transform: scale(1.2) !important;
+  cursor: pointer;
+}
