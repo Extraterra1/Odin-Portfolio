@@ -29,7 +29,6 @@
 }
 
 body {
-  min-height: 100vh;
   background-color: var(--bs-light);
   font-family: 'Basico', sans-serif;
   color: var(--bs-dark);
@@ -156,6 +155,7 @@ ul {
 .projects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  justify-content: center;
   gap: 5rem;
 }
 
@@ -211,6 +211,8 @@ ul {
 
 .screenshot img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ============================================ */
@@ -227,6 +229,7 @@ ul {
 .footer-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  gap: 2rem;
 }
 
 .footer-img-container {
@@ -276,4 +279,90 @@ ul {
 .footer-socials svg:hover {
   transform: scale(1.2) !important;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) {
+  .projects {
+    padding: 5rem;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .projects {
+    padding: 3rem;
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    gap: 3rem;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  html {
+    font-size: 8px;
+  }
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  }
+
+  .footer-img-container img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+  }
+
+  .footer {
+    padding: 3rem;
+  }
+
+  .about {
+    padding: 5rem;
+  }
+
+  .about-container {
+    display: block;
+    max-width: none;
+    background-color: var(--bs-light);
+  }
+
+  .portrait-container {
+    max-width: 30rem;
+    float: left;
+    margin: 0 2rem 0 0;
+    transform: scale(1.1);
+    transform-origin: bottom right;
+  }
+
+  .portrait-container::before {
+    top: 0;
+    right: 0;
+    width: 100%;
+    font-size: 7rem;
+    transform: translateX(90%);
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .content {
+    background-color: inherit;
+    box-shadow: none;
+    display: block;
+  }
+  .content h2 {
+    margin-top: 5rem;
+    font-size: 3rem;
+  }
+
+  .content p {
+    display: block;
+  }
+
+  .socials {
+    display: none;
+  }
 }
